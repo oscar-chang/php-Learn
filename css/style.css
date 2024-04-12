@@ -1,0 +1,44 @@
+body {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.header {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    line-height: 50px;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: darkgrey 2px 1px;
+}
+
+ul {
+    /* width: 35%; */
+    padding: 15px 0;
+    margin: 0px 20px;
+    /* background-color: rgb(103, 248, 200); */
+}
+
+ol {
+    padding: 7px;
+    font-size: 1.2em;
+}
+
+li {
+    padding: 7px;
+    font-size: 1.2em;
+}
+
+.block_margin_35 {
+    padding: 10px 20px;
+    margin: 0 auto;
+    width: 37%;
+    background-color: #ebeaea7c;
+}
+
+.text_center {
+    text-align: center;
+}
