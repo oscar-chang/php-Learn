@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>流程結構練習</title>
+    <title>流程結構練習 2024-04-12</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -159,7 +159,7 @@
             }
             echo "<br>";
 
-            $n = 100;
+            $n = 101;
             $count = 0;
             for($i=3;$i<$n;$i++){
                 $check=true;  
