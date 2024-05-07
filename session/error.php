@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登入成功</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>登入錯誤</title>
+    <link rel="stylesheet" href="../css/style.css">
     <style>
         .scucess_msg {
             color: green;
@@ -15,15 +15,11 @@
 </head>
 <body>
 <div class="block_margin_35">
-    <h2>登入成功</h2>
-    <?php 
-        $acc = $_GET['acc'];
-    ?>
-    歡迎 <span class="scucess_msg"><?= $acc ?></span> 回來
-
-    <?php 
-        header('location:.php?login=1');
-    ?>
+    <h2>帳號或密碼錯誤</h2>
+    帳號<span style='color:red'><?=$_GET['acc'];?></span>不存在
+    <p>
+        <a href="login.php">回登入頁</a>
+    </p>
 </div>
 </body>
 </html>

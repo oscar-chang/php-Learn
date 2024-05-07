@@ -230,6 +230,19 @@
             echo "<hr>";
 
             echo "<hr>";
+            ?>
+            <div>學生 : <br>
+            $a = ['judy', 'amo', 'john', 'peter', 'hebe'];</div><br>
+            <div>科目=> 成績 <br>
+            $b = [</div>
+            <div>'國文' => [95, 88, 45, 59, 71],</div>
+            <div>'英文' => [64, 78, 60, 32, 62],</div>
+            <div>'數學' => [70, 54, 68, 77, 80],</div>
+            <div>'地理' => [90, 81, 70, 54, 62],</div>
+            <div>'歷史' => [84, 71, 62, 42, 64],</div>
+            <div>];</div><br>
+
+            <?php
             $a = ['judy', 'amo', 'john', 'peter', 'hebe'];
 
             $b = [
@@ -242,20 +255,20 @@
         
             echo '<table border="1">';
             echo '<tr><th>姓名</th>';
-            foreach (array_keys($b) as $subject) {
+            foreach (array_keys($b) as $subject) {   //遍歷 $b 陣列的鍵（學科），並將每個學科作為表頭印出
                 echo '<th>' . $subject . '</th>';
             }
             echo '</tr>';
 
             // $isFirstRow = true; // 判斷是否第一列
-            foreach ($a as $index => $name) {
+            foreach ($a as $index => $name) {   //遍歷學生姓名的陣列 $a，每次迭代取得學生的姓名和索引
                 echo '<tr>';
-                echo '<td>' . $name . '</td>';
-                foreach ($b as $subject => $scores) {
-                    echo '<td>' . $scores[$index] . '</td>';
+                echo '<td>' . $name . '</td>';   //印出該學生的姓名
+                foreach ($b as $subject => $scores) {   //遍歷每個學科和相對應的成績陣列
+                    echo '<td>' . $scores[$index] . '</td>';   //印出該學生在該學科的成績
                 }
                 echo '</tr>';
-                $isFirstRow = false; // 將第一列標誌設置為 false
+                //$isFirstRow = false; // 將第一列標誌設置為 false
             }
             echo '</table>';
 
