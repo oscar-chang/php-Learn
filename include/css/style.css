@@ -1,0 +1,375 @@
+* {
+    box-sizing: border-box;
+}
+
+span {
+    display: inline-block;
+    color: black;
+    /* background-color: lightpink; */
+    /* border: 1px solid black; */
+    width: 50px;
+    height: 50px;
+}
+
+img {
+    /* display: block; */
+    /* width: 300px; */
+    /* height: 300px; */
+    width: 100%;
+    height: auto;
+    /* width: 100px;
+    height: 100px; */
+    transition: 0.2s ease-in-out;
+}
+
+img:hover {
+    opacity: 0.8;
+}
+
+.row {
+    clear: both;
+}
+
+.des {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: justify;
+    text-indent: 32px;
+}
+
+.container {
+    /* background-color: blanchedalmond; */
+    width: 72%;
+    display: block;
+    margin: 0 auto;
+    background-color: #dbdbdb;
+}
+
+.boxs {
+    /* background-color: rgb(253, 191, 156); */
+    width: 70%;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 0px;
+    border: black;
+    border-style: double;
+    box-shadow: 0px 0px 0px 10px #ededed;
+    animation: act 5s ease-out infinite;
+    /* animation-delay: 3s; */
+    /* 延遲 0.5 秒開始動畫 */
+}
+
+@keyframes act {
+    form {
+        box-shadow: 0px 0px 0px 10px #ededed;
+    }
+
+    to {
+        box-shadow: 0px 0px 0px 10px #aad4e7;
+    }
+}
+
+.sec1 {
+    position: relative;
+    display: block;
+    width: 20%;
+    margin: 10px auto;
+}
+
+.sec2 {
+    position: relative;
+    display: block;
+    font-family: fantasy;
+    letter-spacing: 2px;
+    font-size: 22px;
+}
+
+.sec3 {
+    position: relative;
+    display: block;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.sec4 {
+    position: relative;
+    display: block;
+    width: 70%;
+    margin: 30px auto;
+    letter-spacing: 1.2px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.sec5 {
+    position: relative;
+    display: block;
+    width: 70%;
+    margin: 30px auto;
+    letter-spacing: 1.2px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.menu_block {
+    text-align: center;
+    margin: 7px auto;
+    width: 70%;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-top-style: double;
+    border-top-width: medium;
+}
+
+.menu_li {
+    display: inline-block;
+    padding: 20px;
+}
+
+a:link {
+    /* //設定還沒有瀏覽過的連結 */
+    text-decoration: none;
+    background-color: #ffffff;
+    /* font-style: italic; */
+    /* font-size: 1.2em; */
+}
+
+a:visited {
+    /* //設定已經瀏覽過的連結 */
+    color: #494949;
+    /* background-color: red; */
+}
+
+a:hover {
+    /* //設定滑鼠移經的連結 */
+    /* text-decoration: underline; */
+    background-color: #fafafa;
+    color: rgb(102, 102, 102);
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    font-size: 20px;
+}
+
+a:active {
+    /* //設定正在點選的連結 */
+    text-decoration: none;
+    background-color: gray;
+    color: #fafafa;
+}
+
+.fix_pic {
+    position: absolute;
+    width: 7%;
+    height: auto;
+    right: 16%;
+    bottom: -16%;
+    animation: action 5s linear infinite;
+    animation-delay: 3s;
+    /* 延遲 0.5 秒開始動畫 */
+    filter: grayscale(1);
+    opacity: 0;
+}
+
+@keyframes action {
+    0% {
+        opacity: 0;
+        bottom: -16%;
+    }
+
+    25% {
+        /* opacity: 0.5; */
+        bottom: -18%;
+    }
+
+    50% {
+        /* opacity: 1; */
+        bottom: -20%;
+    }
+
+    75% {
+        opacity: 1;
+        bottom: -22%;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: -22%;
+    }
+}
+
+
+/*sec4 css*/
+.box_d {
+    display: inline-block;
+    float: left;
+    height: auto;
+    margin: 1.5%;
+    border-radius: 20px;
+    transition: 0.1s ease-in;
+}
+
+.box_d:hover {
+    /* border: black;
+    border-style: groove;
+    border-radius: 25px; */
+    /* overflow: hidden; */
+    /* border-width: thin;
+    box-shadow: 11px 9px 7px -3px rgba(124, 124, 124, 0.2);
+    background: rgb(92, 91, 91); */
+    /* color: white; */
+}
+
+.box_d img {
+    border-radius: 20px;
+    transition: .2s ease-in;
+    transition: transform .2s ease-in;
+    /* 添加 transform 屬性到過渡 */
+    border-radius: 20px 20px 0px 0px;
+}
+
+.box_d img:hover {
+    opacity: 0.8;
+    transform: scale(1.08);
+    /* 在懸停時放大圖片 */
+}
+
+.img_sec {
+    position: relative;
+    filter: grayscale(1);
+}
+
+.cover_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    letter-spacing: 15px;
+    z-index: 999;
+    transition: 0.8s ease-in-out;
+    text-shadow: 3px 3px #333232de;
+}
+
+.cover_text:hover {
+    opacity: 0.5;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    margin: 1.6%;
+}
+
+.box1 {
+    position: absolute;
+    top: 50%;
+    background-color: blueviolet;
+    border: black 10px;
+    border-style: solid;
+}
+
+.box2 {
+    position: absolute;
+    top: 70%;
+    background-color: rgb(4, 130, 134);
+    padding: 10px;
+    border: black 10px;
+    border-style: solid;
+}
+
+.box3 {
+    position: absolute;
+    top: 90%;
+    background-color: rgb(167, 196, 3);
+    margin: 10px;
+    border: black 10px;
+    border-style: solid;
+}
+
+.sec {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    height: 55vh;
+}
+
+.box4 {
+    position: relative;
+    width: 30%;
+    /* background-color: rgb(3, 196, 35); */
+    /* margin: 2.3%; */
+}
+
+.box5 {
+    position: relative;
+    width: 30%;
+    /* background-color: rgb(3, 196, 35); */
+    /* margin: 2.3%; */
+}
+
+.box6 {
+    position: relative;
+    width: 30%;
+    /* background-color: rgb(3, 196, 35); */
+    /* margin: 2.3%; */
+}
+
+.box4>img {
+    width: 100%;
+    height: auto;
+}
+
+.text_title {
+    display: block;
+    margin: 20px 10px;
+    font-family: fantasy;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+}
+
+.text_des {
+    /* width: 100%; */
+    display: block;
+    margin: 20px 10px;
+    letter-spacing: 0.4px;
+    line-height: 1.4em;
+    height: auto;
+    overflow: hidden;
+    /* text-align: justify; */
+    /* text-decoration: underline;
+    text-decoration-color: darkgrey;
+    text-decoration-style: double; */
+}
+
+.text_aurhor {
+    /* width: 100%; */
+    display: block;
+    margin: 10px 25px;
+    letter-spacing: 0.4px;
+    text-align: right;
+    font-size: small;
+    letter-spacing: 0.2px;
+    text-decoration: underline;
+    text-decoration-color: darkgrey;
+    text-decoration-style: double;
+}
+
+.active {
+    /* background-color: black;
+    padding: 5px 10px;
+    color: white; */
+    background-color: #fafafa;
+    color: rgb(102, 102, 102);
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    font-size: 20px;
+    padding: 7px 10px;
+    border-style: groove;
+    text-shadow: 1px 1px gray;
+}

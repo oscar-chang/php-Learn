@@ -1,0 +1,1 @@
+Sec, France did not wait for a European Union decision on implementing tariffs, instead redesigning its cash bonus scheme in December to exclude the purchase of models made in China, which had rapidly gained market share.
