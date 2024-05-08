@@ -57,9 +57,7 @@
                             title="Lorem ipsum 2">
                     </div>
                     <div class="text_title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id.</div>
-                    <div class="text_des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed iste molestias
-                        nulla,
-                        nam placeat esse pariatur possimus recusandae dolorem itaque rem optio non facere assumenda?
+                    <div class="text_des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed nulla, am placeat esse pariatur possimus itaque assumenda?!
                     </div>
                     <div class="text_aurhor">By Oscar</div>
                 </div>
