@@ -36,6 +36,12 @@
                 // }
 
                 // echo $page;
+                // 假如網址為 http://localhost/php-Learn/include/home.php?p=first 
+                // 顯示 first.php 內容
+                // 假如網址為 http://localhost/php-Learn/include/home.php?p=sec
+                // 顯示 sec.php 內容
+                // 假如網址為 http://localhost/php-Learn/include/home.php?p=***** 任何字不存在網頁檔案
+                // 顯示 404.php 內容
                 if ($page == 'home.php') {
                     // $page = isset($_GET['p'])?$_GET['p']:'index';
                     $page = $_GET['p'];
