@@ -1,3 +1,15 @@
+
+<html>
+<head>
+    <title>bootstrap Table</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+
+
+
 <?php 
 $dsn = "mysql:host=localhost;charset=utf8;dbname=school";
 $pdo = NEW PDO($dsn, 'root', '');
@@ -12,7 +24,7 @@ echo "</pre>";
 // var_dump($rows);
 ?>
 <style>
-    table {
+    /* table {
         border: groove;
         border-style: double;
         border-collapse: collapse;
@@ -25,7 +37,7 @@ echo "</pre>";
         border-color: gray;
         border-width: thin;
         padding: 5px 7px;
-    }
+    } */
     .td-title {
         font-size: 20px;
         font-weight: bold;
@@ -33,7 +45,6 @@ echo "</pre>";
     }
     .edit-btn {
         color: red;
-        padding: 0px 10px;
     }
     .tr_31 {
         color: green;
@@ -41,18 +52,11 @@ echo "</pre>";
     .td_school_num {
         color: pink;
     }
-    tr.tr_37 > td:nth-child(6) {
+    /* tr.tr_37 > td:nth-child(6) {
         color: lightgreen;
-    }
-    .insert-btn {
-        text-align: center;
-        display: block;
-        margin: 20px;
-        font-size: large;
-        font-weight: 700;
-    }
+    } */
 </style>
-<a class="insert-btn" href="sql_insert.php">新增學員</a>
+<a class="btn btn-primary" href="sql_insert.php">新增學員</a>
 
 <?php
 if (isset($_GET['name'])) {
@@ -62,7 +66,7 @@ if (isset($_GET['name'])) {
 }
 ?>
 
-<table>
+<table class="table table-striped">
     <tr>
         <td class="td-title">ID</td>
         <td class="td-title">學號</td>
@@ -87,33 +91,14 @@ if (isset($_GET['name'])) {
         <td><?php echo $key['tel']; ?></td>
         <td><?php echo $key['dept']; ?></td>
         <td><?php echo $key['graduate_at']; ?></td>
+        <td><?php echo $key['status_code']; ?></td>
         <td>
-            <?php 
-                switch ($key['status_code']) {
-                    case '001':
-                        $status = '畢業';
-                        break;
-                    case '002':
-                        $status = '補校';
-                        break;
-                    case '003':
-                        $status = '補結';
-                        break;
-                    case '004':
-                        $status = '結業';
-                        break;
-                    
-                    default:
-                        $status = '不明';
-                        break;
-                }
-                echo $status;
-            ?>
-        </td>
-        <td>
-            <a class="edit-btn" href="sql_edit.php?id=<?= $key['id']; ?>">編輯</a>
-            <a class="edit-btn" href="sql_delete.php?id=<?= $key['id']; ?>">刪除</a>
+            <a class="btn btn-primary" href="sql_edit.php?id=<?= $key['id']; ?>">編輯</a>
+            <a class="btn btn-danger" href="sql_delete.php?id=<?= $key['id']; ?>">刪除</a>
         </td>
     </tr>
     <?php } ?>
 </table>
+
+
+</html>
