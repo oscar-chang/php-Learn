@@ -1,19 +1,13 @@
-<style>
-    /* * {
-        font-family: 'Courier New', Courier, monospace;
-    } */
-</style>
-
 <?php
 
-$dsn = "mysql:host=localhost;charset=utf8;dbname=school";
+$dsn = "mysql:host=localhost;charset=utf8;dbname=files";
 $pdo = new PDO($dsn, 'root', '');
 
 
-function all($table, $where)
+function all($table, $where = '')
 {
     global $pdo;
-    $sql = "SELECT * FROM `{$table}` WHERE {$where}";
+    $sql = "SELECT * FROM `{$table}` {$where}";
     $rows = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
     return $rows;
@@ -93,12 +87,11 @@ function insert($table, $cols)
 
     $sql = "INSERT INTO `{$table}` ";
 
-    $sql .= "(`" . join("`,`", array_keys($cols)) . "`)";  //取出鍵
+    $sql .= "(`" . join("`,`", array_keys($cols)) . "`)";
 
-    $sql .= " VALUES('" . join("','", $cols) . "')";  //取出值 - 針對數組的值進行操作 (join("','", $cols) 的結果是將所有值用 ',' 分隔開來)
+    $sql .= " VALUES('" . join("','", $cols) . "')";
 
-    // var_dump(join(',', $cols));
-    // echo $sql;
+    //echo $sql;
 
     return $pdo->exec($sql);
 }
@@ -135,19 +128,14 @@ function q($sql)
     return $pdo->query($sql)->fetchAll();
 }
 
-/** 
+/**
  * 在頁面上快速顯示陣列內容
  * direct dump
- * @param $array 輸入的參數需為陣列 
- *
-*/
-function dd($array) {
-    if (is_array($array)) {
-        echo "<pre>";
-        print_r($array);
-        echo "</pre>";
-    }else{
-        echo '需為陣列';
-    }
+ * @param $array 輸入的參數需為陣列
+ */
+function dd($array)
+{
+    echo "<pre>";
+    print_r($array);
+    echo "</pre>";
 }
-?>

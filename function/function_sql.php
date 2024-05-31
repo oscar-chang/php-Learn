@@ -21,7 +21,7 @@ echo "<hr>";
 dd(find('students', ['uni_id' => 'F200000035', 'parents' => '孔進豐']));
 echo "<hr>";
 
-//insert('dept', ['code' => '801', 'name' => '綜合演藝學系']);
+insert('dept', ['code' => '801', 'name' => '綜合演藝學系']);
 dd(q("select * from `students` where `dept`='3'  order by `id` desc limit 5"));
 //del('dept', ['name' => '綜合演藝學系']);
 
